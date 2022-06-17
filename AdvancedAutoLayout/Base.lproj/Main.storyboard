@@ -36,7 +36,7 @@
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J86-Qs-L2s">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="371"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="247.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constraints de posición"/>
                                         <connections>
@@ -44,11 +44,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TZ-A4-yKT">
-                                        <rect key="frame" x="0.0" y="371" width="382" height="371"/>
+                                        <rect key="frame" x="0.0" y="247.5" width="382" height="247"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constraints de altura y anchura"/>
                                         <connections>
                                             <segue destination="NIr-9h-g9d" kind="show" id="W1n-kX-0fV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyg-iZ-2pC">
+                                        <rect key="frame" x="0.0" y="494.5" width="382" height="247.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Modificar constraints por código"/>
+                                        <connections>
+                                            <segue destination="3cS-md-CCY" kind="show" id="aVj-Bq-wMJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,7 +105,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyh-eu-9Fi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="288"/>
+            <point key="canvasLocation" x="967" y="222"/>
+        </scene>
+        <!--Modificar constraints por código-->
+        <scene sceneID="00k-A0-fvM">
+            <objects>
+                <viewController title="Modificar constraints por código" id="3cS-md-CCY" customClass="ModifyConstraitsViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CX2-hp-1h8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djL-i3-nub">
+                                <rect key="frame" x="16" y="104" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZOw-q4-vst"/>
+                                    <constraint firstAttribute="height" constant="100" id="cVs-4O-vmv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tMg-K2-aCg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="djL-i3-nub" firstAttribute="leading" secondItem="tMg-K2-aCg" secondAttribute="leading" constant="16" id="LUI-os-KfH"/>
+                            <constraint firstItem="djL-i3-nub" firstAttribute="top" secondItem="tMg-K2-aCg" secondAttribute="top" constant="16" id="zle-V8-HYi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modificar constraints por código" id="SqR-0b-VWt"/>
+                    <connections>
+                        <outlet property="heightConstraints" destination="cVs-4O-vmv" id="oWW-DR-zQK"/>
+                        <outlet property="topConstraints" destination="zle-V8-HYi" id="UsG-yr-CB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="458-sK-FHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="1006"/>
         </scene>
         <!--Contraints de posición-->
         <scene sceneID="YS3-vB-BBv">
@@ -160,6 +202,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

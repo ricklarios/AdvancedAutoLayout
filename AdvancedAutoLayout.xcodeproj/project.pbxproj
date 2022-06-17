@@ -13,6 +13,7 @@
 		60FD8D90285D02A500B652C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60FD8D8E285D02A500B652C8 /* Main.storyboard */; };
 		60FD8D92285D02A800B652C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60FD8D91285D02A800B652C8 /* Assets.xcassets */; };
 		60FD8D95285D02A900B652C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60FD8D93285D02A900B652C8 /* LaunchScreen.storyboard */; };
+		60FD8D9D285D0DC800B652C8 /* ModifyConstraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FD8D9C285D0DC800B652C8 /* ModifyConstraitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		60FD8D91285D02A800B652C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60FD8D94285D02A900B652C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60FD8D96285D02A900B652C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60FD8D9C285D0DC800B652C8 /* ModifyConstraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyConstraitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				60FD8D91285D02A800B652C8 /* Assets.xcassets */,
 				60FD8D93285D02A900B652C8 /* LaunchScreen.storyboard */,
 				60FD8D96285D02A900B652C8 /* Info.plist */,
+				60FD8D9C285D0DC800B652C8 /* ModifyConstraitsViewController.swift */,
 			);
 			path = AdvancedAutoLayout;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FD8D9D285D0DC800B652C8 /* ModifyConstraitsViewController.swift in Sources */,
 				60FD8D8D285D02A500B652C8 /* ViewController.swift in Sources */,
 				60FD8D89285D02A500B652C8 /* AppDelegate.swift in Sources */,
 				60FD8D8B285D02A500B652C8 /* SceneDelegate.swift in Sources */,
