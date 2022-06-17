@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-846" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Auto Layout Avanzado-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Auto Layout Avanzado" id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J86-Qs-L2s">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="742"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Constraints de posición"/>
+                                        <connections>
+                                            <segue destination="ieI-cJ-fiq" kind="show" id="g6r-Br-YaE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -52,16 +55,73 @@
                             <constraint firstItem="reb-c5-bHG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="YpY-QI-3RR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zbh-wT-Ced"/>
+                    <navigationItem key="navigationItem" title="Auto Layout Avanzado" id="Zbh-wT-Ced"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="116"/>
         </scene>
+        <!--Contraints de posición-->
+        <scene sceneID="YS3-vB-BBv">
+            <objects>
+                <viewController title="Contraints de posición" id="ieI-cJ-fiq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7oo-4L-aVM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBc-x0-JI8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="374"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFe-D3-qb2">
+                                        <rect key="frame" x="100" y="100" width="214" height="324"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rFe-D3-qb2" secondAttribute="bottom" constant="-50" id="aLr-qO-gwh"/>
+                                    <constraint firstItem="rFe-D3-qb2" firstAttribute="top" secondItem="kBc-x0-JI8" secondAttribute="top" constant="100" id="bTg-Fc-IFg"/>
+                                    <constraint firstItem="rFe-D3-qb2" firstAttribute="leading" secondItem="kBc-x0-JI8" secondAttribute="leading" constant="100" id="u6Q-a9-OCY"/>
+                                    <constraint firstAttribute="trailing" secondItem="rFe-D3-qb2" secondAttribute="trailing" constant="100" id="yWO-Qq-OoD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdF-vr-4di">
+                                <rect key="frame" x="16" y="478" width="68" height="368"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yR3-Mn-jJ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBc-x0-JI8" firstAttribute="leading" secondItem="yR3-Mn-jJ1" secondAttribute="leading" id="6ze-tL-sap"/>
+                            <constraint firstItem="NdF-vr-4di" firstAttribute="leading" secondItem="yR3-Mn-jJ1" secondAttribute="leading" constant="16" id="LxP-kS-KLP"/>
+                            <constraint firstItem="NdF-vr-4di" firstAttribute="top" secondItem="kBc-x0-JI8" secondAttribute="bottom" constant="16" id="MrR-er-I5Y"/>
+                            <constraint firstItem="yR3-Mn-jJ1" firstAttribute="bottom" secondItem="NdF-vr-4di" secondAttribute="bottom" constant="16" id="Qu8-CD-JJy"/>
+                            <constraint firstItem="yR3-Mn-jJ1" firstAttribute="bottom" secondItem="kBc-x0-JI8" secondAttribute="bottom" constant="400" id="ZRP-nC-YLr"/>
+                            <constraint firstItem="yR3-Mn-jJ1" firstAttribute="trailing" secondItem="kBc-x0-JI8" secondAttribute="trailing" id="bgR-PS-t4t"/>
+                            <constraint firstItem="rFe-D3-qb2" firstAttribute="leading" secondItem="NdF-vr-4di" secondAttribute="trailing" constant="16" id="ewn-PQ-4HH"/>
+                            <constraint firstItem="kBc-x0-JI8" firstAttribute="top" secondItem="yR3-Mn-jJ1" secondAttribute="top" id="vYd-NU-kms"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Constraints de posición" id="vpo-cW-mfs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Bl-15-bxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="115.84821428571428"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
